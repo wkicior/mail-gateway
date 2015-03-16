@@ -1,6 +1,8 @@
-from flask import Flask, request, Response, redirect, url_for
+from flask import Flask, request, redirect, url_for
 #from wwoproxy.service.service import WwoService
 import json
+from com.github.wkicior.mailgateway.model.notification import Notification
+from com.github.wkicior.mailgateway.service.mailservice import MailService
 
 app = Flask(__name__)
 
@@ -11,12 +13,10 @@ def index():
 
 @app.route("/mail-gateway/notification/", methods=['POST'])
 def forecast():
-    #wwo_service = WwoService()
-    #forecast_dic =  wwo_service.get_forecast(latitude, longitude)
-    #res = json.dumps(request.form['plan'])
+    mail_service = MailService()
     res = request.get_json()
-    print res
-    print "OK"
+    notification = Notification(res['plan']['email'], res['message'])
+    mail_service.send_mail(notification)
     return redirect(url_for('index'))
 
 

@@ -1,0 +1,18 @@
+[16/Mar/2015:20:46:21] ENGINE Bus STARTING
+[16/Mar/2015:20:46:21] ENGINE Started monitor thread '_TimeoutMonitor'.
+[16/Mar/2015:20:46:21] ENGINE Started monitor thread 'Autoreloader'.
+[16/Mar/2015:20:46:21] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/process/servers.py", line 205, in _start_http_thread
+    self.httpserver.start()
+  File "/usr/lib/python2.7/site-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1955, in start
+    raise socket.error(msg)
+error: No socket could be created -- (('0.0.0.0', 80): [Errno 13] Permission denied)
+
+[16/Mar/2015:20:46:21] ENGINE Bus STOPPING
+[16/Mar/2015:20:46:21] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) already shut down
+[16/Mar/2015:20:46:21] ENGINE Stopped thread '_TimeoutMonitor'.
+[16/Mar/2015:20:46:21] ENGINE Stopped thread 'Autoreloader'.
+[16/Mar/2015:20:46:21] ENGINE Bus STOPPED
+[16/Mar/2015:20:46:21] ENGINE Bus EXITING
+[16/Mar/2015:20:46:21] ENGINE Bus EXITED
