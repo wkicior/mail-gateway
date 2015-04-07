@@ -1,5 +1,6 @@
-from com.github.wkicior.mailgateway.boundary.app import app
 import cherrypy
+
+from com.github.wkicior.mailgateway.boundary.app import app
 
 if __name__ == '__main__':
 

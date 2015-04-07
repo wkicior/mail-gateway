@@ -64,3 +64,5 @@ settings.py.prod
 .idea
 *.iml
 
+#logs
+appserver_error_log
