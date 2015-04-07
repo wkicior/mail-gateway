@@ -66,3 +66,4 @@ settings.py.prod
 
 #logs
 appserver_error_log
+appserver_access_log
