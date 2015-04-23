@@ -52,3 +52,18 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#emacs
+*~
+
+#settings
+settings.py
+settings.py.prod
+
+#intelli J
+.idea
+*.iml
+
+#logs
+appserver_error_log
+appserver_access_log
