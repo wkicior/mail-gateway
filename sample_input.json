@@ -1,1 +1,36 @@
-{"plan":{"email":"diso.junk@gmail.com"},"message":"It's windy ;)","rating":{"rating":"PROMISING","startingFrom":"2010-12-12T12:00:00.000Z"},"forecast":{"days":[{"conditionEntries":[{"hour":"12:00","windDirDegree":13,"windGustKnots":14,"windSpeedKnots":15}],"date":"2010-12-12"},{"conditionEntries":[{"hour":"12:00","windDirDegree":13,"windGustKnots":14,"windSpeedKnots":15}],"date":"2010-12-12"}]}}
+{
+    "forecast": {
+        "days": [
+            {
+                "conditionEntries": [
+                    {
+                        "hour": "12:00",
+                        "windDirDegree": 13,
+                        "windGustKnots": 14,
+                        "windSpeedKnots": 15
+                    }
+                ],
+                "date": "2010-12-12"
+            },
+            {
+                "conditionEntries": [
+                    {
+                        "hour": "12:00",
+                        "windDirDegree": 13,
+                        "windGustKnots": 14,
+                        "windSpeedKnots": 15
+                    }
+                ],
+                "date": "2010-12-12"
+            }
+        ]
+    },
+    "message": "It's windy ;)",
+    "plan": {
+        "email": "diso.junk@gmail.com"
+    },
+    "rating": {
+        "rating": "PROMISING",
+        "startingFrom": "2010-12-12T12:00:00.000Z"
+    }
+}

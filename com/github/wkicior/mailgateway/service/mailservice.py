@@ -1,3 +1,4 @@
+from datetime import datetime
 from com.github.wkicior.mailgateway.model.mail import Mail
 from com.github.wkicior.mailgateway.service.smtpproxy import SmtpProxy
 
@@ -9,5 +10,12 @@ class MailService(object):
         self.smtp_proxy = SmtpProxy()
 
     def send_mail(self, notification):
-        mail = Mail(notification.mail, notification.msg, "Forecast", "Helyeah@gmail.com")
+        mail = Mail(notification.mail, self.compose_message(notification), "Forecast", "Helyeah@gmail.com")
         self.smtp_proxy.send_mail(mail)
+
+    def compose_message(self, notification):
+        msg =  notification.msg + "\n" + notification.rating.rating + " starting from "
+        msg = msg + datetime.strftime(notification.rating.starting_from, '%d-%m-%Y %H:%M')
+        return msg
+
+    
